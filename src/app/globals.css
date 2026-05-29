@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-orange: #FF6A2F;
+  --color-deep-black: #050505;
+  --color-light-gray: #F5F5F3;
+  --color-soft-gray: #7A7A7A;
+  
+  --font-sans: var(--font-inter), sans-serif;
+  --font-heading: var(--font-montserrat), sans-serif;
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #050505;
+  --font-sans: var(--font-inter);
+}
+
+.dark {
+  --background: #050505;
+  --foreground: #FFFFFF;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 5px;
+  border: 2px solid #050505;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6A2F;
+}
+
+/* Selection */
+::selection {
+  background-color: #FF6A2F;
+  color: #FFFFFF;
+}
+
+/* Custom Cursor Glow */
+.cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 106, 47, 0.15) 0%, rgba(255, 106, 47, 0) 70%);
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  mix-blend-mode: screen;
+}
+
+/* Lenis Scroll Smoothness */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Card Glow Effect */
+.glow-card-border {
+  position: relative;
+  background: linear-gradient(90deg, rgba(255, 106, 47, 0.1) 0%, rgba(255, 106, 47, 0.4) 50%, rgba(255, 106, 47, 0.1) 100%);
+  background-size: 200% 100%;
+  animation: border-flow 4s linear infinite;
+}
+
+@keyframes border-flow {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}

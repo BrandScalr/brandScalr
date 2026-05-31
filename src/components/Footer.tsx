@@ -39,7 +39,7 @@ export default function Footer() {
             </div>
 
             <p className="text-soft-gray text-base max-w-sm leading-relaxed mb-8 font-sans">
-              We build custom content scaling systems, high-converting creative engines, and strategic paid growth pipelines. Not an agency — your dedicated growth operators.
+              We build custom content scaling systems, high-converting creative engines, and strategic paid growth pipelines. Not an agency, your dedicated growth operators.
             </p>
             
             <a
